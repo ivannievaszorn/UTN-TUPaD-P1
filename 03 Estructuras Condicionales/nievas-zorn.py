@@ -224,4 +224,3 @@ elif mes == 12:
             estacion = "Otoño"
 
 print(estacion)
-
