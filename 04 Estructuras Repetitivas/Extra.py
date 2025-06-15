@@ -74,34 +74,34 @@
 # Pide al usuario una cadena de texto.
 # Cuenta y muestra cuántas vocales (a, e, i, o, u) contiene.
 
-# import unicodedata  # Importa un módulo que permite manejar caracteres Unicode (como tildes)
+import unicodedata  # Importa un módulo que permite manejar caracteres Unicode (como tildes)
 
-# # Función que elimina acentos/tildes del texto
-# def quitar_acentos(texto):
-#     # Normaliza el texto en forma 'NFD' y elimina los caracteres de tipo 'Mn' (marca no espaciadora)
-#     return ''.join(
-#         c for c in unicodedata.normalize('NFD', texto)
-#         if unicodedata.category(c) != 'Mn'
-#     )
+# Función que elimina acentos/tildes del texto
+def quitar_acentos(texto):
+    Normaliza el texto en forma 'NFD' y elimina los caracteres de tipo 'Mn' (marca no espaciadora)
+    return ''.join(
+        c for c in unicodedata.normalize('NFD', texto)
+        if unicodedata.category(c) != 'Mn'
+    )
 
-# # Texto de ejemplo con vocales acentuadas
-# texto = input("Ingrese la frase para contar las vocales: ")
+Texto de ejemplo con vocales acentuadas
+texto = input("Ingrese la frase para contar las vocales: ")
 
-# # Pasa el texto a minúsculas y le quita los acentos
-# texto_sin_acentos = quitar_acentos(texto.lower())
+Pasa el texto a minúsculas y le quita los acentos
+texto_sin_acentos = quitar_acentos(texto.lower())
 
-# # Lista de vocales que queremos contar (ya sin tildes)
-# vocales = "aeiou"
+Lista de vocales que queremos contar (ya sin tildes)
+vocales = "aeiou"
 
-# # Diccionario vacío donde se guardará la cantidad de cada vocal
-# conteo = {}
+Diccionario vacío donde se guardará la cantidad de cada vocal
+conteo = {}
 
-# # Recorremos cada vocal y contamos cuántas veces aparece en el texto
-# for vocal in vocales:
-#     conteo[vocal] = texto_sin_acentos.count(vocal)
+Recorremos cada vocal y contamos cuántas veces aparece en el texto
+for vocal in vocales:
+    conteo[vocal] = texto_sin_acentos.count(vocal)
 
-# # Imprimimos el resultado final
-# print(conteo)
+Imprimimos el resultado final
+print(conteo)
 
 # Dada una lista (ej: [3, 1, 3, 5, 1]), crea una nueva lista con los números que aparecen más de una vez (en este caso: [3, 1]).
 # Preguntas de reflexión:
@@ -216,18 +216,18 @@
 # Pide al usuario un número entero positivo.
 # Imprime todos los números primos menores o iguales a ese número.
 
-numero = int(input("Ingrese un numero entero positivo: "))
+# numero = int(input("Ingrese un numero entero positivo: "))
 
-if numero > 0:
-    for num in range(2, numero + 1):
-        es_primo = True
-        for i in range (2, num):
-            if num % i == 0:
-                es_primo = False
-        if es_primo:
-            print(num)
-else:
-    print("Ingrese un número positivo")
+# while numero <=0:
+#     numero = int(input("Error! Ingresó un numero negativo. Ingrese un numero entero positivo mayor a 1: "))
+
+# for num in range(2, numero + 1):
+#     es_primo = True
+#     for i in range (2, num):
+#         if num % i == 0:
+#             es_primo = False
+#     if es_primo:
+#         print(num)
 
 
 ## Alternativa ##
